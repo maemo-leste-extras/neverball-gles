@@ -453,6 +453,10 @@ WINDRES ?= windres
 
 all : $(BALL_TARG) $(PUTT_TARG) $(MAPC_TARG) sols locales desktops
 
+data: sols locales
+
+executables: $(BALL_TARG) $(PUTT_TARG) $(MAPC_TARG) desktops
+
 ifeq ($(ENABLE_HMD),libovr)
 LINK := $(CXX) $(ALL_CXXFLAGS)
 else

@@ -1,0 +1,4 @@
+dist/neverball.desktop   usr/share/applications/hildon
+dist/neverball.png       usr/share/icons/hicolor/128x128/apps
+mapc                     usr/games
+neverball                usr/games

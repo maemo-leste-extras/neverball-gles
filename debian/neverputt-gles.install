@@ -1,0 +1,3 @@
+dist/neverputt.desktop   usr/share/applications/hildon
+dist/neverputt.png       usr/share/icons/hicolor/128x128/apps
+neverputt                usr/games

@@ -1,0 +1,4 @@
+.version
+share/version.h
+dist/neverball.png
+dist/neverputt.png

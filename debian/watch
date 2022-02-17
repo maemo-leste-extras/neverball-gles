@@ -1,0 +1,2 @@
+version=3
+http://neverball.org/download.php neverball-(.*)\.(?:zip|tgz|tbz2|txz|tar\.gz|tar\.bz2|tar\.xz)

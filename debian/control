@@ -1,0 +1,66 @@
+Source: neverball-gles
+Section: games
+Priority: optional
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders:
+ Markus Koschany <apo@debian.org>
+Build-Depends:
+ debhelper-compat (= 10),
+ libjpeg-dev,
+ libpng-dev,
+ libsdl2-dev,
+ libsdl2-ttf-dev,
+ libvorbis-dev
+Standards-Version: 4.5.0
+Homepage: http://neverball.org/
+
+Package: neverball-gles
+Architecture: any
+Depends:
+ neverball-data,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Suggests:
+ neverputt
+Description: 3D floor-tilting game
+ In the grand tradition of Marble Madness and Super Monkey Ball, Neverball
+ has you guide a rolling ball through dangerous territory. Balance on narrow
+ bridges, navigate mazes, ride moving platforms, and dodge pushers and
+ shovers to get to the goal. Race against the clock to collect coins to earn
+ extra balls.
+XB-Maemo-Display-Name: Neverball
+XB-Maemo-Icon-26: iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAABRklEQVQ4y42T0W3DMAxEn9NM4K5A
+ zpAZ1F3qYZwZukI1Q7sCOYNm6AclS3ITtAQEwfDxeDxSCwAIRwhKIjlkMoYzxXJKeGdTEZSMAe7s
+ 3J8lCHtKiqCA4e1ktl7nJa7CmvTjdmtwKKwswajlDW8pl6Zcd5EOBwbxIuxN9UUQQLaAM8Bt6FiE
+ rfYQ6tUSAuhhQMi2sZ7icAUgnblH59qXJ+5HAoMAA7SK9upXxiBxr7aKTfIB5fNU0dkdDZfkNMzJ
+ Ix9IkJDkDBWUX8vC0czRNH/Bu8kxuDzDu5TRWs9t0oKPXUjl9wPucRxpFYRHfQ/shnnwXAFFa/oD
+ aOjPbdJ+6f/ahH3q5IBXlhdgpQCvrHG11S4UjG++Qn8mUyjXSinxOB0XGepY+GHd12V4yXFmd61q
+ 9bZqy+Bm326d4P2eEp5uxDPL/xk/qv+MrjLh7bIAAAAASUVORK5CYII=
+
+Package: neverputt-gles
+Architecture: any
+Depends:
+ neverputt-data,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Suggests:
+ neverball
+Description: 3D miniature golf game
+ Neverputt is a hot-seat multi-player miniature golf game for 1 to 4 players.
+ The 18-hole course takes advantage of all the elements that challenge
+ Neverball players, including moving platforms and barriers, teleporters,
+ ramps, and drop-offs. A simple putting interface and golf scoring system
+ have been added.
+XB-Maemo-Display-Name: Neverputt
+XB-Maemo-Icon-26: GgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACYUlEQVRIx72V0XHjMAxEny+ugG4B
+ qCE14GpIC1QNqUGu4VowaohbAGpgDfchSpFpOfd3nOFIo6Gw2F0AfON52e1281KK3u93BxCwAlOB
+ ucEE6O5844d1PvgWmYmqGjALiIqYAKqKAxFRgZqZCczA9RXA6eijmd3mebbJDAPEDFUFEQLITCKC
+ zMTdAZyFWY6x3o7iAx8fHx+F1hDVLfiqRymF02nJ7XK5AGhr7XcHeAD5NQQXg1kzJSIQVch+PnPb
+ mU+JIiLS5ZKXDAQ+30WslMIJKO/v5P2+ONoaXC7cFw9orW1ArS0+l1JKa+3UJXs0WUAU6lYemaC6
+ va9prR5sFRExkqmdSY4SmXSdZflz2SJEBA54l0h2Z/RZqtXHpzK1NcPo8JaJmDG5b8H2IueeVdcl
+ vmNdRwD1kaw78zwz+HT4vmrTG0NzqCLJo46LICKWMoXFk3UPLPZLu6d7gPxm97gyc9V1iPII9DQN
+ Dkwe/teNhZkdnskVaMgyXjSav2KwB+SATexBMsldrAeAHFpUVTcPzGyZPx0kO1AAGcF1raIhgfNR
+ H6zS6C6zWisRweSO7eRbZdp6SJV0n909gTj3alMzm2utAFyv1+cKAqZpYu4NJyIggu2CrxLpwtYy
+ k3OvKqu1bmaqKu6+GSwimxfTNB2WM8MI2UsUuz7Z2n1l8681ziIRwd0zMx3wtz7i8+vrq6mq6Yva
+ XifmT8FLKbg77v7ZWvtzdKOZmdVaq+mg7Vi2I1C/3dLdH67Q0wvmJiKiqrY8NjDpILljEJmZ7h69
+ UvOfd/I4gXcj5in5H0bS/1l/AesQTEpqLeF1AAAAAElFTkSuQmCC

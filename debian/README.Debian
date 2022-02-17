@@ -1,0 +1,13 @@
+Neverball for Debian
+====================
+
+Available packages
+------------------
+
+Neverball provides two games: neverball itself and neverputt. In Debian, the
+games are split in separate packages so that it is possible to install them
+independently.
+
+It should also be noted that the tool used to compile maps, `mapc', is
+included in the neverball package. So, if you want to create maps for
+neverputt, you'll also need to install neverball.

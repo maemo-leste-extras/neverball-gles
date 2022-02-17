@@ -1,0 +1,461 @@
+neverball-gles (1.6.0+git20180603-4) unstable; urgency=medium
+
+  * Swich to gles
+
+ -- Carl Klemm <carl@uvos.xyz>  Mon, 14 Jul 2022 15:22:04 +0200
+
+neverball-gles (1.6.0+git20180603-3) unstable; urgency=medium
+
+  * Switch to debhelper-compat = 13.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Work around FTBFS with GCC 10 by compiling with -fcommon. (Closes: #957604)
+
+ -- Markus Koschany <apo@debian.org>  Wed, 22 Jul 2020 15:41:04 +0200
+
+neverball-gles (1.6.0+git20180603-2) unstable; urgency=medium
+
+  * Install the png files from the geom directory to fix graphical glitches in
+    Neverball. (Closes: #871223)
+
+ -- Markus Koschany <apo@debian.org>  Sat, 18 May 2019 15:17:26 +0200
+
+neverball-gles (1.6.0+git20180603-1) unstable; urgency=medium
+
+  * New upstream snapshot 1.6.0+git20180603.
+  * Switch to compat level 11.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Use canonical VCS URI.
+  * Drop libphysfs-dev from B-D.
+
+ -- Markus Koschany <apo@debian.org>  Fri, 04 Jan 2019 19:38:45 +0100
+
+neverball-gles (1.6.0-8) unstable; urgency=medium
+
+  * Declare compliance with Debian Policy 4.0.0.
+  * Use https for Format field.
+  * Fix FTCBFS: Let dh_auto_build pass cross compilers.
+    Thanks to Helmut Grohne for the report and patch. (Closes: #852736)
+  * Remove Jordà Polo and Tamas SZERB from Uploaders. They are not active
+    anymore. (Closes: #852168)
+  * Drop deprecated menu files and xpm icons.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 24 Jun 2017 16:01:54 +0200
+
+neverball-gles (1.6.0-7) unstable; urgency=medium
+
+  * debian/rules: Use correct ENABLE_HMD option.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 14 Dec 2016 09:39:32 +0100
+
+neverball-gles (1.6.0-6) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Disable openhmd on hurd-i386, sh4 and powerpcspe and make the game compile
+    again.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Dec 2016 23:41:11 +0100
+
+neverball-gles (1.6.0-5) experimental; urgency=medium
+
+  * Enable Oculus Rift support and build-depend on libopenhmd-dev.
+    (Closes: #845657)
+  * Switch to compat level 10.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 10 Dec 2016 00:43:38 +0100
+
+neverball-gles (1.6.0-4) unstable; urgency=medium
+
+  * Update my e-mail address.
+  * Vcs-fields: Use cgit and https.
+  * Drop neverball-gles-dbg because the automatic -dbgsym package replaced it.
+  * Mark -data packages as Multi-Arch: foreign.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 09 Aug 2016 00:14:13 +0200
+
+neverball-gles (1.6.0-3) unstable; urgency=medium
+
+  * debian/copyright: Clarify Octocat logo permissions. (Closes: #757621)
+
+ -- Markus Koschany <apo@gambaru.de>  Tue, 12 Aug 2014 20:11:19 +0200
+
+neverball-gles (1.6.0-2) unstable; urgency=medium
+
+  * Enable mouse grab in window mode again and make the cursor invisible in
+    fullscreen mode. Append -DNDEBUG to CPPFLAGS to achieve this. Thanks to
+    Filipus Klutiero for the report. (Closes: #755760)
+
+ -- Markus Koschany <apo@gambaru.de>  Thu, 24 Jul 2014 10:24:21 +0200
+
+neverball-gles (1.6.0-1) unstable; urgency=medium
+
+  [ Alexander Reichle-Schmehl ]
+  * Removed myself from uploaders.
+
+  [ Markus Koschany ]
+  * Imported Upstream version 1.6.0.
+  * Declare compliance with Debian Policy 3.9.5.
+  * Add myself to Uploaders.
+  * Switch from SVN to Git. Change Vcs-fields accordingly.
+  * debian/control:
+    - Switch to SDL2. Fixes primary click does not start level with a
+      left-handed mouse. (Closes: #700475)
+    - neverball-gles-common: Suggest fonts-wqy-microhei instead of
+      ttf-wqy-zenhei.
+  * Drop the following patches. These bugs were fixed upstream.
+    - fix-build-gold-linker.patch
+    - reset-video-mode.patch
+  * Refresh separate-data-and-bin.patch and update-french-po-file.patch.
+  * Add keywords.patch.
+    - Add keywords to desktop file.
+  * Update DEP3 headers for all patches. Forward patches to Neverball project
+    at github.
+  * debian/rules:
+    - Remove HOME variable to workaround #544835. HOME does no longer exist.
+    - Remove override for dh_auto_install.
+  * Use clean file instead of dh_auto_clean override.
+  * Update all install files for new release.
+  * Update docs files.
+  * Install doc/changes.txt as upstream changelog.
+  * Install release-notes.md with docs files.
+  * Install hires icons to /usr/share/icons/hicolor/128x128/apps.
+  * wrap-and-sort -sa.
+  * Update neverball-gles-common.links. Change wqy-zenhei.ttc to wqy-microhei.ttc.
+  * Update copyright years. Add GPL-3+-with-font-exception and DejaVu license.
+  * neverball-gles-common: Fix symlink to DejaVuSans.ttf and point to the new
+    package fonts-devjavu-core.
+
+ -- Markus Koschany <apo@gambaru.de>  Tue, 15 Jul 2014 23:17:35 +0200
+
+neverball-gles (1.5.4-6) unstable; urgency=low
+
+  [ Juhani Numminen ]
+  * Team upload
+  * libpng15 transition: Build-depend on libpng-dev instead of
+    libpng12-dev. (Closes: #662445)
+  * Fix neverball-gles not launching if previously used video mode is
+    not available by adding reset-video-mode.patch. (Closes: #677409)
+    Thanks to Fabian Greffrath for the patch.
+  * Fix non-working Vcs-Browser field in control (400 Bad Request)
+    with a working one.
+  * Implement hardening by using dpkg-buildflags in debian/rules to export all
+    necessary build flags.
+
+  [ Markus Koschany ]
+  * Bump compat level to 9 and require debhelper >= 9.
+  * Bump Standards-Version to 3.9.4, no changes needed.
+  * Switch to source format 3.0 (quilt).
+  * Update debian/copyright to copyright format 1.0.
+  * Update the watch file and make the extension regex more flexible.
+  * Add longtitle to menu files.
+  * Drop build-dependency on quilt because source format 3.0 uses quilt by
+    default and remove README.source.
+  * debian/control:
+    - Drop old Conflicts relationships. Older packages of neverball-gles and
+      neverputt (Lenny and earlier) are no longer supported.
+    - Use fonts-dejavu-core instead of the deprecated ttf-dejavu-core package.
+    - data-packages: Suggest neverball-gles and neverputt.
+  * Rewrite and simplify debian/rules by using dh sequencer.
+  * Build with --parallel.
+  * Drop NEWS file. Users who upgrade from Squeeze or Wheezy are not affected.
+    Upgrading directly from Lenny to Jessie is not supported.
+  * Add DEP-3 headers to all patches and forward them upstream.
+  * Install all debugging symbols correctly and make neverball-gles-dbg useful again.
+    (Closes: #651180)
+  * Update French .po file. Change the occurrences of "sauver" to
+    "enregistrer". (Closes: #700287)
+
+ -- Markus Koschany <apo@gambaru.de>  Sun, 02 Jun 2013 12:41:18 +0200
+
+neverball-gles (1.5.4-5) unstable; urgency=medium
+
+  * libjpeg transition:  Build-depend on libjpeg-dev instead of
+    libjpeg62-dev (Closes: #635088)
+  * Urgency set to medium due to RC bug fix
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Mon, 31 Oct 2011 14:53:56 +0100
+
+neverball-gles (1.5.4-4) unstable; urgency=medium
+
+  * Fix FTBFS with binutils-gold (Closes: #556916)
+    Thanks to Felix Geyer for the patch!
+  * Bump standards version to 3.9.2 (no changes needed)
+  * Add ${misc:Depends} to neverball-gles-common, neverball-gles-data, neverball-gles-dbg,
+     neverputt-data
+  * Add debian/README.source pointing to /usr/share/doc/quilt/README.source
+  * Set urgency to medium due to RC bug fix
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Mon, 09 May 2011 15:21:57 +0200
+
+neverball-gles (1.5.4-3) unstable; urgency=low
+
+  * Don't build data files every time (Closes: #598614)
+    * Patch upstram Makefile to provide seppereta rules for data and executables
+    * Use them to build arch:all and arch:any packages
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Mon, 04 Oct 2010 08:22:25 +0000
+
+neverball-gles (1.5.4-2) unstable; urgency=low
+
+  * debian/rules: Set HOME to an existing directory as a temporary workaround
+    to correctly build the package on some buildds. (Closes: #544835)
+
+ -- Jordà Polo <jorda@ettin.org>  Sat, 31 Oct 2009 19:41:22 +0100
+
+neverball-gles (1.5.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/localemodir.patch: Remove patch; included upstream.
+  * Remove quilt as patch manager, no longer needed.
+
+ -- Jordà Polo <jorda@ettin.org>  Sun, 20 Sep 2009 13:28:03 +0200
+
+neverball-gles (1.5.2-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fix typo in French translation. (Closes: #535912)
+  * debian/control:
+    + Standards-Version bumped to 3.8.3 (no changes required).
+    + Suggest ttf-wqy-zenhei, used for the Chinese translation.
+    + Add build-dependency on libphysfs-dev.
+  * debian/copyright: Include copyright and license for the JPEG routines.
+  * debian/patches:
+    + data_path.patch: Remove patch; it is now possible to pass data and
+      locale paths directly to the Makefile.
+    + localemodir.patch: New patch; fixes unexpected behaviour when setting
+      the LOCALEDIR variable.
+
+ -- Jordà Polo <jorda@ettin.org>  Tue, 25 Aug 2009 08:47:37 +0200
+
+neverball-gles (1.5.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    + Standards-Version bumped to 3.8.1 (no changes required).
+    + Change section of neverball-gles-dbg to "debug".
+  * debian/copyright: Refer to GPL-2, not GPL.
+
+ -- Jordà Polo <jorda@ettin.org>  Wed, 08 Apr 2009 10:02:44 +0200
+
+neverball-gles (1.5.0-2) unstable; urgency=medium
+
+  [ Jordà Polo ]
+  * debian/control: libsdl-image and libsdl-mixer build dependencies are
+    obsolete; use libvorbis-dev, libpng12-dev and libjpeg62-dev instead.
+
+  [ Alexander Reichle-Schmehl ]
+  * Fix debian/watch since download location changed
+  * Adopt debian/control to my new name
+  * create symlinks to ttf files in proper package
+    (Fixes segfault for neverputt, there fore urgency set to medium)
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Wed, 25 Feb 2009 16:46:04 +0100
+
+neverball-gles (1.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Update Homepage.
+  * debian/copyright:
+    + Remove translators from "Copyright Holders", as requested by upstream
+      developers.
+    + Update copyright years.
+  * debian/NEWS: New file; explain compatibility issues (moved from
+    README.Debian).
+  * debian/watch: Update location of upstream's tarball.
+  * Don't install Neverball's "misc" course as it isn't included in stable
+    releases.
+
+ -- Jordà Polo <jorda@ettin.org>  Mon, 09 Feb 2009 17:34:47 +0100
+
+neverball-gles (1.4.0+svn2527-1) experimental; urgency=low
+
+  * Experimental package based on upstream's development version. (Closes:
+    #330089, #456522)
+  * debian/patches:
+    + data_path.patch: Updated; redefine path to locales.
+    + Remove obsolete patches (stereo_sound.patch and putt_scores.patch).
+  * debian/*.install: Install translations and new neverball-gles/neverputt levels.
+  * debian/rules:
+    + Change font link name to DejaVuSans-Bold.ttf.
+    + Include new documentation files: AUTHORS and MANUAL.
+    + Add get-orig-source target to generate an .orig tarball from upstream's
+      SVN repository.
+    + Remove chmod to fix permissions, there aren't executable data files
+      anymore.
+  * Updated copyright information.
+  * Removed obsolete XPM icons; new icons are now included upstream.
+  * debian/control:
+    + Update Standards-Version to 3.8.0: added a brief debian/README.source.
+    + Conflict with previous versions and restrict compatibility to current
+      source version only.
+    + Move dependency on neverball-gles-common from "binary" packages to -data
+      packages.
+  * Provide debug package. (Closes: #484872)
+  * Split neverputt into neverputt and neverputt-data.
+  * Remove .desktop files and manpages from the package, they are now
+    available upstream.
+  * debian/README.Debian: Explain compatibility issues.
+
+ -- Jordà Polo <jorda@ettin.org>  Mon, 22 Sep 2008 00:55:53 +0200
+
+neverball-gles (1.4.0-6) unstable; urgency=low
+
+  * The issue with not having any text in the menu is already fixed by the
+    ttf-bitstream-vera bug (#461276) so I close this bug (Closes: #295130)
+
+ -- Tamas SZERB <toma@rulez.org>  Sat, 15 Mar 2008 16:12:46 +0100
+
+neverball-gles (1.4.0-5) unstable; urgency=low
+
+  * Install mapc in /usr/games instead of /usr/bin.
+  * debian/patches/putt_scores.patch: New patch; fix Neverputt hard-coded
+    limits for score counts. (Closes: #457207)
+
+ -- Jordà Polo <jorda@ettin.org>  Mon, 03 Mar 2008 21:23:14 +0100
+
+neverball-gles (1.4.0-4) unstable; urgency=low
+
+  * debian/rules: Fix brace expansion bashism. (Closes: #459114)
+  * debian/control:
+    + Remove XS- from Vcs fields.
+    + Remove Homepage from package descriptions.
+    + Standards-Version bumped to 3.7.3 (no changes required).
+  * Removed Encoding key from desktop files since it is deprecated.
+  * Switch from ttf-bitstream-vera to ttf-dejavu-core. (Closes: #441691,
+    #461276)
+
+ -- Jordà Polo <jorda@ettin.org>  Sun, 20 Jan 2008 23:56:04 +0100
+
+neverball-gles (1.4.0-3) unstable; urgency=low
+
+  * debian/rules: Fix permissions of neverputt data files.
+  * debian/patches/stereo_sound.patch: Set sound channels to stereo.
+    (Closes: #389749, #410489)
+  * Added desktop files for neverball-gles and neverputt. (Closes: #439538)
+  * debian/control:
+    + Added Homepage field.
+    + neverball-gles and neverputt now suggest each other.
+  * Added a README.Debian to explain the neverball-gles/neverputt split.
+  * Include information about environment variables in manpages.
+
+ -- Jordà Polo <jorda@ettin.org>  Mon, 17 Sep 2007 17:54:14 +0200
+
+neverball-gles (1.4.0-2) unstable; urgency=low
+
+  * debian/control:
+    + New maintainer: Debian Games Team. (Closes: #387471)
+    + Standards-Version dumped to 3.7.2; no changes needed.
+    + Added a new build dependency on quilt (>= 0.40).
+    + Added XS-Vcs-Svn and XS-Vcs-Browser fields.
+    + Added homepage URL to description.
+    + Split neverball-gles and neverputt, and include the neverball-gles-common
+      package, which contains the files shared between both games.
+    + Added Alexander Schmehl, Jordà Polo and Tamas SZERB as uploaders.
+  * debian/rules:
+    + Targets and comments cleanup.
+    + Do not ignore `make clean'.
+    + Fix permissions of various data files that are marked as executable.
+  * Map source files (.map) aren't installed anymore.
+  * Use quilt as patch manager.
+  * debian/watch: Added a watchfile.
+  * debian/README.Debian: Removed, doesn't provide any info. (Closes: #354395)
+  * debian/neverball-gles.menu:
+    + Section changed to «Games/Action» due to new menu policy.
+    + Added neverball-gles and neverputt icons. (Closes: #275649)
+  * Link font file from ttf-bitstream-vera package and do not install the
+    duplicated TTF.
+  * debian/compat: Debhelper compatibility dumped to 5; no changes needed.
+  * debian/copyright:
+    + Updated authors and license, which is actually GPLv2 or later and
+      not GPLv2 only.
+    + Explicitly state the license and copyright of the Debian packaging.
+  * Updated manpages, including game controls and references to more info.
+
+ -- Jordà Polo <jorda@ettin.org>  Sun, 12 Aug 2007 11:34:59 +0200
+
+neverball-gles (1.4.0-1) unstable; urgency=low
+
+  * new stable upstream release
+  * fixed UI (closes: #269167)
+
+ -- Tamas SZERB <toma@rulez.org>  Fri, 17 Sep 2004 00:01:27 +0200
+
+neverball-gles (1.3.7-1) unstable; urgency=low
+
+  * a patched 1.3.6 to 1.3.7 to fix the Putt 16 invisible wall.
+    (closes: #261857)
+
+ -- Tamas SZERB <toma@rulez.org>  Mon,  6 Sep 2004 22:07:46 +0200
+
+neverball-gles (1.3.6-1) unstable; urgency=low
+
+  * new stable upstream release
+  * Fixed mapc normal optimization bug.  Resolves the "Level 6" crash.
+
+ -- Tamas SZERB <toma@rulez.org>  Sun, 25 Jul 2004 21:49:17 +0200
+
+neverball-gles (1.3.4-1) unstable; urgency=low
+
+  * Removed unnecessary autopause when pointer is not grabbed
+  * Fixed GUI not hilighting widget under cursor when mouse isn't moved
+  * Fixed config file written only when changed
+  * Architecture: any -> Architecture: all for neverdata package because
+    now SOLs (level files) and replay files have no endianness problem,
+    they are platform independents.
+  * dependency corrections (closes: #259271) for the sake of data files
+
+ -- Tamas SZERB <toma@rulez.org>  Fri, 16 Jul 2004 02:27:58 +0200
+
+neverball-gles (1.3.3-1) unstable; urgency=low
+
+  * new stable release
+  * OpelGL ABI fixes (closes: #253660); avoid the
+    glActiveTexture and glMultiTexCoord2f areas.
+  * byte-order independent rewritten replay routines
+
+ -- Tamas SZERB <toma@rulez.org>  Tue, 13 Jul 2004 16:44:30 +0200
+
+neverball-gles (1.3.1-1) unstable; urgency=low
+
+  * new stable release
+  * new perspective, new game rule: catch the stars to open the door
+    to the new level!
+  * the menu subsystem is improved (closes: #252181)
+
+ -- Tamas SZERB <toma@rulez.org>  Tue, 02 Jul 2004 12:00:21 +0200
+
+neverball-gles (1.2.0-4) unstable; urgency=low
+
+  * new sourceball is out. (closes: #246519)
+  * debian patches goes into debian/*.diff
+
+ -- Tamas SZERB <toma@rulez.org>  Sat,  1 May 2004 19:52:49 +0200
+
+neverball-gles (1.2.0-3) unstable; urgency=low
+
+  * ugly underlining in description fixed (closes: #245299)
+  * the upstream author asked to apply a little pach in ball/game.c
+
+ -- Tamas SZERB <toma@rulez.org>  Mon, 26 Apr 2004 21:03:49 +0200
+
+neverball-gles (1.2.0-2) unstable; urgency=low
+
+  * Architecture: all -> Architecture: any in control files
+    according the email w/ the upstream maintainer, so I
+    respect his opinion, means the data files will be arch dependant,
+    thus we'll eliminate the endianness problem, but this implies more
+    CPU and space. (closes: #244780)
+  * rebuild against the libsdl-ttf2.0[-dev] because the libsdl-ttf1.2
+    is now deprecated (closes: #245063), and put this into the control
+    file as build dependency (closes: #244598).
+
+ -- Tamas SZERB <toma@rulez.org>  Wed, 21 Apr 2004 11:50:14 +0200
+
+neverball-gles (1.2.0-1) unstable; urgency=low
+
+  * Initial Release.
+  * With Max Gilead <gilead@yellow.dyndns.org> permission
+    this is the take over version of neverball-gles. (closes: #205048)
+  * Own ITPed upload (closes: #231195)
+
+ -- Tamas SZERB <toma@rulez.org>  Sun, 11 Apr 2004 19:45:29 +0200

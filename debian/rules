@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+# Disable debug mode. Enable mouse grab in window mode again. See #755760
+export DEB_CPPFLAGS_MAINT_APPEND = -DNDEBUG -fcommon
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+%:
+	dh $@
+
+override_dh_auto_build-arch:
+	dh_auto_build -- $(shell dpkg-buildflags --export=configure) \
+		DATADIR=/usr/share/games/neverball \
+		LOCALEDIR=/usr/share/locale \
+		ENABLE_OPENGLES=1 \
+		executables
+	# Rename icons for .desktop files.
+	cp $(CURDIR)/dist/neverball_128.png $(CURDIR)/dist/neverball.png
+	cp $(CURDIR)/dist/neverputt_128.png $(CURDIR)/dist/neverputt.png
+
+override_dh_auto_test:
+	# Tests don't work. Do nothing here to prevent a FTBFS.
+
+override_dh_installchangelogs:
+	dh_installchangelogs doc/changes.txt
+
+override_dh_missing:
+	dh_missing --fail-missing

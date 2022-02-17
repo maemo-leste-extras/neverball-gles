@@ -4,8 +4,6 @@
 BUILD := $(shell head -n1 .build 2> /dev/null || echo release)
 
 VERSION := 1.6.0
-VERSION := $(shell sh scripts/version.sh "$(BUILD)" "$(VERSION)" \
-	"share/version.in.h" "share/version.h" ".version")
 
 $(info Will make a "$(BUILD)" build of Neverball $(VERSION).)
 

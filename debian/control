@@ -10,7 +10,8 @@ Build-Depends:
  libpng-dev,
  libsdl2-dev,
  libsdl2-ttf-dev,
- libvorbis-dev
+ libvorbis-dev,
+ git
 Standards-Version: 4.5.0
 Homepage: http://neverball.org/
 

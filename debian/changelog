@@ -1,3 +1,9 @@
+neverball-gles (1.6.0+git202201172-1) unstable; urgency=medium
+
+  * Fix depends
+
+ -- Carl Klemm <carl@uvos.xyz>  Mon, 14 Jul 2022 15:22:04 +0200
+
 neverball-gles (1.6.0+git20220117-1) unstable; urgency=medium
 
   * Swich to gles

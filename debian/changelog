@@ -1,3 +1,7 @@
+neverball-gles (1.6.0+git20220118-1) unstable; urgency=medium
+
+  * fix version.h
+
 neverball-gles (1.6.0+git20220117-1) unstable; urgency=medium
 
   * Swich to gles
